@@ -1,3 +1,35 @@
+{
+  "name": "legit-dashboard",
+  "author": "Legit Security",
+  "licence": "UNLICENSED",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "craco start",
+    "start-with-auth": "REACT_APP_DEV_AUTH=true craco start",
+    "start-mock": "REACT_APP_MOCK_DATA=true craco start",
+    "start-with-staging-be": "REACT_APP_UNIFIED_API_ENDPOINT=https://demo5.legitsecurity.net REACT_APP_LEGIT_KEYCLOAK_REALM=demo5 REACT_APP_DEV_AUTH=true craco start",
+    "build": "NODE_OPTIONS='--max-old-space-size=6144' craco build",
+    "test": "craco test",
+    "preinstall": "sh ./remove_clients.sh",
+    "postinstall": "yarn install --check-files --ignore-scripts",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "dependencies": {
     "@craco/craco": "^6.1.0",
     "@headlessui/react": "^1.2.0",
@@ -61,3 +93,27 @@
     "yarn": "^1.22.10",
     "yup": "^0.29.3"
   },
+  "devDependencies": {
+    "cypress": "^9.0.0",
+    "cypress-grep": "^2.5.3",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "otplib": "12.0.1",
+    "prettier": "^1.19.1",
+    "react-scripts": "4.0.3"
+  },
+  "resolutions": {
+    "ansi-regex": "5.0.1",
+    "nth-check": "2.0.1",
+    "ansi-html": "0.0.7",
+    "json-schema": "0.4.0",
+    "browserslist": "4.16.5"
+  }
+}
