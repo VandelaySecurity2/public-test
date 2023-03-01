@@ -1,0 +1,7 @@
+name: GitHub Actions Demo
+on: [push]
+jobs:
+  shiftleft_with_a_very_long_and_unesscery_name_that_just_contains_a_lot_of_chars_so_it_might_break_a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo adding more data here to see if this effects things password23 = \"aasjidhgsdjhsdfodhhefhefhefhgersfsadadasd\"; ./sl analyze --app some-app --tag branch=$Env:GITHUB_REF --csharp --verbose --dotnet-framework --cpg -v src/SomeSolution.sln
